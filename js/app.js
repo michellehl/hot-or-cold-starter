@@ -109,63 +109,18 @@ secNum = Math.floor((Math.random() * 100) + 1);
 
 }
 //function for a new game, clears html values  and array and calls get new random number
-$(".new").click(function() {
+$("a.new").click(function() {
    $("#feedback").html("Make your Guess!");
-   $("#userGuess").val("Enter your Guess");
+   $("#userGuess").val("");
    $("#guessList").html(" ");
-   $("#count").html(" ");
-  
+   $("#count").html("0");
+ count=0;
   // $("h2").html(" ");  
 $("ul").html(" ");
 arrayUserData = [];
 secNum = 0;
+ $(".clearfix").show();
 getNumber();
 });
 
 });
-/*--FIRST YOU ENTER A NUMBER IN THE INPUT TAG USERGUESS
-THEN YOU CLICK THE BUTTON $("form").("submit", function(e){ e.preventDefault(); })
-// /*---calls function newGame to start new game and calls function getUserGuess---*/
-// newGame();
-// /*---form.submit(function(event){
-// 	event.preventDefault();---*/
-// 	GetUserGuess();
-
-// };
-// newButton.click(newGame);
-
-// function newGame(){
-// 	form.find('input[type=submit]').css('opacity','1');
-// 	getSecretNumber();
-// alert("test");
-// }
-
-
-
-
-// function getSecretNumber() {
-//  secNum = Math.floor((Math.random() * 100) + 1);
-
-// }
-// function getUserGuess(){
-// 	 userGuess = input.val();
-// 	 input.val('');
-// 	 input.focus();
-// 	 if(userGuess % 1 !== 0 || userGuess < 0 || userGuess > 100)
-// }
-// 	
-//  userGuess = (parseInt(userGuess));
-//     if (isNaN(userGuess) || userGuess % 1 != 0 || userGuess > 100 || userGuess < 1) {
-//     	$ alert("You entered " + userGuess + " You must enter a valid number from 1-100 to continue...");
-//     }
-
-// }
-// function howClose() {
-// 	if (secNum - userGuess >= 50 ){
-// 		$ userFeedback == "very cold";
-// 	}
-// 	$userFeedback == "??";
-// }
-// function placeInfo() {
-// 	feedback.html(userFeedback);
-//}
